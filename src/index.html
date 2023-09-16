@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مبدل تاریخ و ساعت کلاس</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="../dist/style.css" />
+  </head>
+  <body class="font-Vazirmatn">
+    <div class='mx-8 mt-11 mb-5'>
+      <p class='leading-8 mb-4'>
+        تایم های یک ساعتی(مثلا 8 تا 9) به همراه روزی که اون کلاس رو داری وارد کن تا بهت
+        بگم چه ساعت و چه روز هایی تا آخر ترم کلاست برگزار میشه
+        &#128521
+      </p>
+      <p class='leading-8'>&#x2022; توجه! : روز هایی که تعطیلی رسمی هستند در لیست نمایش داده نمیشوند &#x2705;</p>
+    </div>
+
+    <form
+      class="shadow-inner shadow-black/40 rounded-xl w-fit flex space-y-8 flex-col mx-auto mt-12 p-8"
+    >
+      <label>روز هفته که اون کلاس رو داری انتخاب کن</label>
+      <select class="select select-accent w-full max-w-xs" id="selectDay">
+        <option value="Saturday">شنبه</option>
+        <option value="Sunday">یکشنبه</option>
+        <option value="Monday">دوشنبه</option>
+        <option value="Tuesday">سه شنبه</option>
+        <option value="Wednesday">چهارشنبه</option>
+        <option value="Thursday">پنجشنبه</option>
+        <option value="Friday">جمعه</option>
+      </select>
+      <label>تایم یک ساعتی کلاست رو انتخاب کن</label>
+      <select class="select select-accent w-full max-w-xs" id="selectTime">
+        <option value="even-first">از 8 تا 9</option>
+        <option value="odd-first">از 9 تا 10</option>
+        <option value="even-second">از 10 تا 11</option>
+        <option value="odd-second">از 11 تا 30 : 11</option>
+        <option value="odd-third">از 30 : 11 تا 12</option>
+        <option value="even-third">از 12 تا 13</option>
+        <option value="odd-fourth">از 13 تا 14</option>
+        <option value="even-fourth">از 14 تا 15</option>
+        <option value="odd-fifth">از 15 تا 16</option>
+        <option value="even-fifth">از 16 تا 17</option>
+        <option value="odd-sixth">از 17 تا 18</option>
+        <option value="even-sixth">از 18 تا 19</option>
+        <option value="odd-seventh">از 19 تا 20</option>
+        <option value="even-seventh">از 20 تا 21</option>
+      </select>
+      <button
+        id="submit"
+        class="btn text-base"
+        onclick="my_modal_5.showModal()"
+      >
+        تایید
+      </button>
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <p id='show-result' class="py-4 leading-8"></p>
+          <p>اسکرین شات بگیر یادت نره!</p>
+          <div class="modal-action">
+            <form method="dialog">
+              <button class="btn">بستن</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </form>
+    <p style='text-align: center; margin-top: 15px'>توسعه یافته توسط <a class='text-cyan-300' href="https://github.com/javadevbh/" target="blank">جواد بهرامی</a>&#127775;</p>
+    <script type="module" src="../js/main.js"></script>
+  </body>
+</html>
