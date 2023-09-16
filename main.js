@@ -51,11 +51,9 @@ const convertDay = (fullName) => {
 };
 
 btn.addEventListener("click", (e) => {
-  console.log(selectTime.value)
   e.preventDefault();
   convertTime(selectTime.value);
   convertDay(selectTime.value);
-  console.log(extractedSubstringForDays)
   switch (selectDay.value) {
     case "Saturday": {
       if (extractedSubstringForDays == "even") {
